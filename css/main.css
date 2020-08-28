@@ -1,3 +1,38 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("../../fonts/raleway-v17-latin_cyrillic-700.woff") format("woff"), url("../../fonts/raleway-v17-latin_cyrillic-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/roboto-v20-latin_cyrillic-400.woff") format("woff"), url("../../fonts/roboto-v20-latin_cyrillic-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/roboto-v20-latin_cyrillic-500.woff") format("woff"), url("../../fonts/roboto-v20-latin_cyrillic-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/roboto-v20-latin_cyrillic-700.woff") format("woff"), url("../../fonts/roboto-v20-latin_cyrillic-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../fonts/roboto-v20-latin_cyrillic-900.woff") format("woff"), url("../../fonts/roboto-v20-latin_cyrillic-900.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
+
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 /*
 Document
@@ -267,5 +302,193 @@ Add the correct display in Chrome and Safari.
 */
 summary {
   display: list-item;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+body {
+  color: #212121;
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.list-link {
+  text-decoration: none;
+}
+
+.filtr-link {
+  text-decoration: none;
+}
+
+.filtr-link:hover, .filtr-link:focus {
+  color: #2196F3;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.page-header {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  color: #000000;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.logo-word {
+  color: #2196F3;
+}
+
+.site-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 85px;
+}
+
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
+  color: #2196F3;
+}
+
+.item.nav {
+  position: relative;
+}
+
+.item.nav.item + .item {
+  margin-left: 50px;
+}
+
+.nav-link {
+  display: block;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 32px 0;
+  color: #212121;
+  text-decoration: none;
+}
+
+.nav-link.current {
+  color: #2196F3;
+}
+
+.nav-link.current::after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-radius: 2px;
+  background-color: #2196F3;
+}
+
+.contact-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-nav .item + .item {
+  margin-left: 30px;
+}
+
+.contact-nav .contact-link:hover,
+.contact-nav .contact-link:focus {
+  color: #2196F3;
+}
+
+.contact-link {
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: #757575;
+  text-decoration: none;
+}
+
+.contact-link .contacts-icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: #757575;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-link:hover .contacts-icon,
+.contact-link:focus .contacts-icon {
+  fill: #2196F3;
+}
+
+.contact-item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
