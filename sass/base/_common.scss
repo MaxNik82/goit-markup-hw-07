@@ -19,6 +19,10 @@ html {
     overflow: hidden;
 }
 
+.flexbox {
+    display: flex;
+}
+
 body {
     color: $primary-text-color;
     background-color: $primary-white-color;  
@@ -35,9 +39,24 @@ body {
     align-items: center;
 }
 
-.flexbox {
-    display: flex;
-  }
+section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;   
+    color: $primary-text-color;
+    margin: 0 0 50px;
+}
+    
+.list-title,
+.title {
+    color: $primary-text-color;
+} 
 
 .list {
     padding: 0;
@@ -49,18 +68,9 @@ body {
     }
 }
 
-
-.filtr-link {
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-    color: $accent-color;
-    }
-}
-
 img {
     display: block;
     max-width: 100%;
     height: auto;
 }
+
