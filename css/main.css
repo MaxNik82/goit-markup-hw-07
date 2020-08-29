@@ -1061,20 +1061,6 @@ img {
   margin-bottom: 30px;
 }
 
-.form-label {
-  position: absolute;
-  top: 50%;
-  left: 20px;
-  margin-left: 20px;
-  color: #757575;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .form-input {
   padding: 12px 12px 12px 20px;
   text-indent: 18px;
@@ -1096,6 +1082,24 @@ img {
   outline-color: #2196F3;
 }
 
+.form-input:focus ~ .form-icon {
+  fill: #2196F3;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  margin-left: 20px;
+  color: #757575;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .form-icon {
   position: absolute;
   width: 18px;
@@ -1111,14 +1115,16 @@ img {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-input:focus ~ .form-icon {
-  fill: #2196F3;
-}
-
 .form-comment {
   display: block;
   position: relative;
   margin-bottom: 20px;
+}
+
+.form-comment:focus-within .comment-label {
+  color: #2196F3;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
 }
 
 .comment-label {
@@ -1132,19 +1138,7 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-comment:focus-within .comment-label {
-  color: #2196F3;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-}
-
-.textarea:not(:placeholder-shown) + .comment-label {
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
-  color: #2196F3;
-}
-
-.form-comment .textarea {
+.textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1160,6 +1154,12 @@ img {
   cursor: pointer;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.textarea:not(:placeholder-shown) + .comment-label {
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  color: #2196F3;
 }
 
 .checkbox-label {
@@ -1191,6 +1191,13 @@ img {
   overflow: hidden;
 }
 
+.checkbox:checked + .checkbox-icon {
+  border-color: transparent;
+  background-color: #2196F3;
+  background-origin: border-box;
+  background-size: contain;
+}
+
 .checkbox-icon {
   display: inline-block;
   width: 16px;
@@ -1198,17 +1205,6 @@ img {
   margin-right: 7px;
   border: 1px solid #212121;
   border-radius: 2px;
-}
-
-.accent-form {
-  color: #2196F3;
-}
-
-.checkbox:checked + .checkbox-icon {
-  border-color: transparent;
-  background-color: #2196F3;
-  background-origin: border-box;
-  background-size: contain;
 }
 
 .form-button {
